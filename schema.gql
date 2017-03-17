@@ -1,0 +1,19 @@
+# Defines all available queries.
+type Query {
+  # Mandatory Hello World demo query.
+  hello: String
+}
+
+# Defines all available mutations.
+type Mutation {
+    # Greets you with a friendly message.
+    greet(
+      # Your name.
+      name: String!
+    ): String
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
