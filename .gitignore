@@ -1,5 +1,7 @@
 
 # Created by https://www.gitignore.io/api/node
+# generated code by webpack
+server/
 
 ### Node ###
 # Logs
