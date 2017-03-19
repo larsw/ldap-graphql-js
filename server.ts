@@ -2,25 +2,26 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var { graphqlExpress, graphiqlExpress } = require('graphql-server-express')
 var { makeExecutableSchema } = require('graphql-tools')
+const typeDefs = require('./schema.gql')
 
-var typeDefs = [`
-type Query {
-  hello: String
-}
+// var typeDefs = [`
+// type Query {
+//   hello: String
+// }
 
-# Defines all available mutations.
-type Mutation {
-    # Greets you with a friendly message.
-    greet(
-      # Your name.
-      name: String!
-    ): String
-}
+// # Defines all available mutations.
+// type Mutation {
+//     # Greets you with a friendly message.
+//     greet(
+//       # Your name.
+//       name: String!
+//     ): String
+// }
 
-schema {
-  query: Query
-  mutation: Mutation
-}`]
+// schema {
+//   query: Query
+//   mutation: Mutation
+// }`]
 
 var resolvers = {
   Query: {
